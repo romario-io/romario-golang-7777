@@ -1,0 +1,37 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: "romario-golang-7777"
+  description: "romario-golang-7777"
+  annotations:
+    github.com/project-slug: romario-io/romario-golang-7777
+    backstage.io/techdocs-ref: dir:.
+    argocd/app-name: dev-romario-golang-7777
+    backstage.io/kubernetes-id: "romario-golang-7777"
+    sonarqube.org/project-key: "romario-golang-7777"
+    grafana/tag-selector: "kubernetes"
+    prometheus.io/rule: container_cpu_usage_seconds_total{namespace="romario-golang-7777"}
+    prometheus.io/alert: all
+  links:
+    - url: https://romario-golang-7777.romario.io
+      title: Website
+      icon: Website
+    - url: https://grafana.romario.io/
+      title: Dashboard
+      icon: dashboard      
+    - url: https://alerts.romario.io/
+      title: Alerts
+      icon: alert 
+    - url: https://argocd.backstage.local/applications/dev-romario-golang-7777?resource=
+      title: ArgoCD
+      icon: cloud
+  tags:
+    - golang
+    - "lab"
+    - "service"
+    - "experimental"
+spec:
+  system: "lab"
+  type:  "service"
+  lifecycle: "experimental"
+  owner: "romario-io"
